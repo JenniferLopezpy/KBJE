@@ -1,0 +1,13 @@
+{
+  "informacion_basica": {
+    "titulo": "Información Básica del Sistema",
+    "descripcion": "Datos fundamentales del sistema KBJE",
+    "version": "1.0.0",
+    "fecha_creacion": "2024-01-15"
+  },
+  "configuracion": {
+    "puerto": 8080,
+    "modo": "desarrollo",
+    "seguridad": "habilitada"
+  }
+} 
