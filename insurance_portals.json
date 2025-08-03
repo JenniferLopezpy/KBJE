@@ -1,0 +1,122 @@
+{
+  "InsurancePortals": {
+    "accepted_insurances": [
+      {
+        "insurance_name": "Aetna",
+        "portal_name": "Availity",
+        "website": "https://www.availity.com",
+        "pcp_change_required": false,
+        "notes": "Meritan plans do not require PCP change"
+      },
+      {
+        "insurance_name": "Carelon",
+        "portal_name": "Availity",
+        "website": "https://www.availity.com",
+        "pcp_change_required": false,
+        "notes": ""
+      },
+      {
+        "insurance_name": "Cigna",
+        "portal_name": "Availity",
+        "website": "https://cignaforhcp.cigna.com",
+        "pcp_change_required": false,
+        "notes": "PCP change not required"
+      },
+      {
+        "insurance_name": "Empire Plan",
+        "portal_name": "Availity",
+        "website": "https://www.availity.com",
+        "pcp_change_required": false,
+        "notes": "Empire NYSHIP PPO doesn't require PCP"
+      },
+      {
+        "insurance_name": "Fidelis Medicaid",
+        "portal_name": "Fidelis",
+        "website": "https://www.fideliscare.org",
+        "pcp_change_required": false,
+        "notes": "Essential Plan doesn't require PCP"
+      },
+      {
+        "insurance_name": "HealthFirst",
+        "portal_name": "Availity",
+        "website": "https://www.availity.com",
+        "pcp_change_required": true,
+        "notes": "PCP must be Dr. Simon/Ilan"
+      },
+      {
+        "insurance_name": "Magnacare",
+        "portal_name": "Magnacare",
+        "website": "https://www.magnacare.com",
+        "pcp_change_required": false,
+        "notes": ""
+      },
+      {
+        "insurance_name": "Medicare of NY",
+        "portal_name": "Connex (NGS)",
+        "website": "https://www.ngsmedicare.com",
+        "pcp_change_required": false,
+        "notes": ""
+      },
+      {
+        "insurance_name": "Medicaid",
+        "portal_name": "ePACES",
+        "website": "https://www.emedny.org",
+        "pcp_change_required": false,
+        "notes": ""
+      },
+      {
+        "insurance_name": "United HealthCare",
+        "portal_name": "UHC",
+        "website": "https://www.uhcprovider.com",
+        "pcp_change_required": true,
+        "notes": "Excluding Commercial plans"
+      }
+    ],
+    "pending_verification": [
+      {
+        "insurance_name": "Centers Plan",
+        "portal_name": "Centers Plan",
+        "website": "Pending",
+        "status": "TBC"
+      },
+      {
+        "insurance_name": "ElderPlan",
+        "portal_name": "ElderPlan",
+        "website": "Pending",
+        "status": "TBC"
+      }
+    ],
+    "not_accepted": [
+      {
+        "insurance_name": "UHC Commercial Plan",
+        "reason": "Not accepted per clinic policy"
+      },
+      {
+        "insurance_name": "WellCare",
+        "reason": "Currently not accepting"
+      },
+      {
+        "insurance_name": "Oxford",
+        "reason": "All Oxford plans excluded"
+      },
+      {
+        "insurance_name": "MetroPlus",
+        "reason": "Not in network"
+      },
+      {
+        "insurance_name": "Tricare",
+        "reason": "Military insurance not accepted"
+      }
+    ],
+    "special_notes": {
+      "pcp_requirements": "Medicare, Medicaid, MAP and MCO PPO/POS/EPO plans do not require PCP on file",
+      "verification_process": "Always check eligibility 4+ days before appointment",
+      "self_pay_options": "Available for patients with inactive insurance"
+    },
+    "metadata": {
+      "source": "IM_INFORMATION.xlsx",
+      "last_updated": "2025-06-27",
+      "contact": "Billing Dept Ext 186 for insurance questions"
+    }
+  }
+}

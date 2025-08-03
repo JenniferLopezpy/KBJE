@@ -1,0 +1,366 @@
+{
+  "CallFlow": {
+    "NewPatient (NP)": {
+      "steps": [
+        "Warmly greet the new patient and thank them for choosing Suffolk Primary Health. Kindly ask for their insurance ID and verify their eligibility through our available portals (Availity, ePACES, UHC, Fidelis). Please refer to the Insurance Portals tab in this document for detailed guidance.",
+        "Access the appropriate insurance portals and carefully verify the patient's current eligibility status, checking for active coverage and any restrictions.",
+        "If the patient is not eligible due to inactive insurance, lack of coverage, or if Suffolk Primary Health does not currently accept their insurance plan (please see the Insurance Portals tab for complete details):",
+        "Gently inform the patient that they will need to pay for their appointment as a self-pay patient. Provide them with the current pricing information from the Self Pay Pricing tab in this document, and offer to answer any questions about payment options.",
+        "If the patient has active, eligible insurance and is already assigned to one of our Primary Care Providers (Dr. Simon or Dr. Ilan), you may proceed to the next step.",
+        "If the patient has eligible insurance but is currently assigned to a different Primary Care Provider:",
+        "Politely explain that they will need to contact their insurance company to change their PCP to either Dr. Simon or Dr. Ilan (refer to the Insurance Portals tab for specific contact information and procedures).",
+        "Let them know that their insurance company will provide a confirmation number once the change is processed. They can either bring this confirmation number to their appointment or call us to provide it over the phone.",
+        "Open ECW and create a comprehensive new patient profile by clicking 'ADD' and carefully entering all required demographic information, following each ECW prompt thoroughly.",
+        "Important reminder: All new patients must be scheduled for a New Patient Annual Visit (NPANNVISIT) appointment type in ECW to ensure proper initial assessment.",
+        "Set the appropriate Visit Status in ECW: select 'PENDING' for standard new patients or 'PCP(CHANGE)' if a primary care provider change is required.",
+        "Schedule the patient's appointment in ECW using the New Patient Annual Visit (NPANNVISIT) appointment type, ensuring adequate time is allocated.",
+        "If the patient is under 18 years of age, kindly inform them (or their parent/guardian) that a legal guardian must be present for all medical visits as per our policy.",
+        "Thoroughly document all interactions, decisions, and next steps in ECW General Notes, including any special instructions or follow-up requirements."
+      ]
+    },
+    "ScheduleAppointment": {
+      "steps": [
+        "Begin by warmly greeting the patient and asking for their full name and date of birth to locate their profile in ECW. Take a moment to review their previous visit history to better understand their ongoing care and any special needs.",
+        "Kindly inquire about the specific reason for today's appointment request. This helps us ensure they receive the most appropriate care and are scheduled with the right provider.",
+        "Listen carefully to determine whether this should be scheduled as a routine wellness visit, urgent sick visit, follow-up appointment, or specialty consultation, as each requires different preparation.",
+        "Check our provider's current availability in the ECW scheduling system, and please always confirm the patient's preferred facility location (Hempstead or Riverhead) to ensure convenience for them.",
+        "Consult the Appointment Guide tab in this document to verify you're selecting the correct visit type and allocating the appropriate time duration for their specific needs.",
+        "Proceed to schedule the appointment in ECW, carefully complete all required Line Up questions as prompted by the system, and review all appointment details with the patient for accuracy.",
+        "Before ending the call, send an SMS confirmation through ECW to provide the patient with their complete appointment details, and let them know they'll receive this confirmation message shortly."
+      ]
+    },
+    "CancelAppointment": {
+      "steps": [
+        "Begin by locating the patient's appointment in ECW using their date of birth and full name for accurate identification. Take care to verify you have the correct patient and appointment.",
+        "Before proceeding with the cancellation, kindly offer to reschedule the appointment for a more convenient date and time. Many patients prefer rescheduling over canceling, and this helps maintain continuity of care.",
+        "If the patient chooses to cancel or reschedule, navigate to ECW and update the visit status using the appropriate dropdown selection: choose 'CANCEL(PHONECAN)' for complete cancellations or 'R/S (RESCHEDULE)' when moving to a new time.",
+        "Take detailed notes in ECW General Notes about your interaction, including the specific reason for the cancellation or rescheduling, and any relevant circumstances the patient mentioned.",
+        "Complete the administrative requirement by recording the cancellation details in our Cancellation Reason.xlsx tracking file, including today's date, the reason provided, and your initials for our internal reporting."
+      ]
+    },
+    "ConfirmAppointment": {
+      "steps": [
+        "Start by searching for the patient's appointment in ECW using their date of birth and full name to ensure accurate identification and avoid any confusion.",
+        "If no appointment is found in the system, politely let them know and offer to schedule a new appointment that works for their schedule. If an existing appointment is located, proceed with the confirmation process.",
+        "When you've successfully located their appointment, please verify the following important details with the patient to ensure everything is correct:",
+        "- The scheduled appointment date and time",
+        "- The type of visit and expected duration",
+        "- The facility location (Hempstead or Riverhead)",
+        "- The name of their assigned provider",
+        "Once all details are confirmed as accurate, navigate to ECW and update the visit status dropdown to 'CONFIRM(VOICE)' to officially record that the appointment has been confirmed via phone call.",
+        "Complete your interaction by documenting the confirmation in ECW General Notes, including the timestamp of your call and confirmation that all appointment details were verified with the patient."
+      ]
+    },
+    "MedicationRequests": {
+      "steps": {
+        "When a patient is requesting a medication refill": [
+          "First, carefully check whether the requested medication appears on our approved refill list to determine if we can process it directly.",
+          "If the medication is approved for refill, please confirm and verify the patient's current pharmacy address and contact information in their ECW profile to ensure accuracy.",
+          "Once verified, process and send the refill request electronically to their designated pharmacy through our secure system.",
+          "Always document the refill request and all processing details in the patient's ECW General Notes, including the medication name, dosage, and pharmacy information."
+        ],
+        "When the requested medication is not on our approved refill list": [
+          "Check the patient's upcoming appointments to see if they have a scheduled visit with the prescribing provider within the next 30 days.",
+          "If no appointment exists within this timeframe, kindly inform the patient that they will need to schedule an appointment with the prescribing provider to discuss and request the refill safely.",
+          "If they do have an upcoming appointment scheduled, let them know they can discuss the medication refill during their scheduled visit with their provider.",
+          "Document the medication request and your response in the patient's ECW General Notes for continuity of care."
+        ],
+        "When a patient reports their medication did not arrive at the pharmacy": [
+          "Begin by verifying and confirming the accuracy of the pharmacy address and contact information stored in the patient's ECW profile.",
+          "If the pharmacy information is correct and up-to-date, send a detailed TeleEncounter to the doctor's Medical Assistant with the complete prescription details including medication name, dosage, and pharmacy information.",
+          "Document the pharmacy delivery issue and your TeleEncounter submission in the patient's ECW General Notes for follow-up tracking."
+        ]
+      }
+    },
+    "ThirdPartyRequests": {
+      "For medical records requests": [
+        "Verify the caller's identity by confirming their name and the organization they represent (e.g., insurance company, employer, legal entity).",
+        "Authenticate the patient's identity by confirming their date of birth and full legal name.",
+        "Verify that our facility maintains the requested patient records in our system.",
+        "If records are available, send them via secure fax or email as requested by the caller.",
+        "If records are not readily available, contact the front desk to determine if they can be retrieved, or send a detailed TeleEncounter to the doctor's Medical Assistant with the specific request details.",
+        "Inform the caller professionally about the expected timeframe for sending the records via their preferred method (fax or email).",
+        "Document the third-party request and actions taken in ECW General Notes."
+      ],
+      "For medical note requests": [
+        "Verify the caller's identity by confirming their name and the organization they represent (e.g., insurance company, employer, legal entity).",
+        "Authenticate the patient's identity by confirming their date of birth and full legal name.",
+        "Search for the requested medical note in the patient's ECW documentation.",
+        "If the medical note is available, send it via secure fax or email as requested.",
+        "If the note is not available, contact the front desk to explore retrieval options or send a detailed TeleEncounter to the doctor's Medical Assistant with specific request information.",
+        "Inform the caller about the expected delivery timeframe via their preferred method (fax or email).",
+        "Document the medical note request and resolution in ECW General Notes."
+      ],
+      "For other document requests (lab results, imaging reports, clearances)": [
+        "Verify the caller's identity by confirming their name and the organization they represent (e.g., insurance company, employer, legal entity).",
+        "Authenticate the patient's identity by confirming their date of birth and full legal name.",
+        "Search for the requested document in the patient's ECW file system.",
+        "If the document is available, send it via secure fax or email as requested.",
+        "If the document is not available, contact the front desk and send a comprehensive TeleEncounter to Karen Santos (Extension 102) with detailed information about the request.",
+        "Inform the caller about the expected delivery timeframe via their preferred method (fax or email).",
+        "Document the document request and processing steps in ECW General Notes."
+      ]
+    },
+    "SickAndPain": {
+      "Initial Assessment - Listen with Compassion": [
+        "Warmly greet the patient and express genuine concern for their well-being. Gently ask them to take their time describing what they're experiencing today, reassuring them that you're here to help.",
+        "Practice active listening by giving them your full attention, acknowledging their concerns with empathy, and asking clarifying questions when needed.",
+        "Take comprehensive notes while they speak to ensure you capture all important details, and let them know you're documenting everything to help provide the best possible care."
+      ],
+      "Distinguishing Between Illness and Pain Symptoms": {
+        "For Illness/Sick Symptoms - Ask these questions with gentle care": [
+          "Are you currently experiencing any fever or chills? If yes, do you know what your temperature has been?",
+          "Do you have a cough? If so, can you tell me if it's a dry cough or if you're bringing up any phlegm?",
+          "Is your throat feeling sore, scratchy, or painful when you swallow?",
+          "Are you experiencing any nasal congestion, runny nose, or sinus pressure?",
+          "Have you had any episodes of nausea, vomiting, or diarrhea recently?",
+          "When did you first notice these symptoms beginning?",
+          "Have you been in contact with anyone who has been sick recently, or do you know of any illness going around your workplace or home?"
+        ],
+        "For Pain Symptoms - Ask these questions with understanding and patience": [
+          "Can you help me understand the type of pain you're experiencing? Is it sharp, dull, throbbing, burning, or aching?",
+          "On a scale of 1 to 10, with 10 being the worst pain you can imagine, how would you rate your current pain level?",
+          "How long have you been dealing with this pain? Did it start suddenly or gradually?",
+          "Does the pain come and go in waves, or is it constant throughout the day?",
+          "Have you noticed anything that makes the pain feel better or worse, such as movement, rest, or certain positions?",
+          "Is this pain related to any recent injury, fall, or accident that you can recall?",
+          "Are you experiencing any tingling, numbness, or shooting sensations along with the pain? These could indicate nerve involvement."
+        ],
+        "Critical Red Flags - Immediate Emergency Referral Required": [
+          "ANY motor vehicle accident or work-related injury - Direct the patient to go to the Emergency Room immediately for proper evaluation",
+          "Severe chest pain, pressure, or difficulty breathing - These require immediate emergency care",
+          "Signs of stroke including face drooping, arm weakness, or speech difficulty - Call 911 or direct to ER immediately",
+          "Severe, sudden abdominal pain that's getting progressively worse",
+          "High fever (over 101°F) combined with severe symptoms or confusion",
+          "Any mention of suicidal thoughts or self-harm - Immediately transfer to our mental health crisis line or emergency services"
+        ]
+      },
+      "Processing Urgent Sick and Pain Calls - Detailed Step-by-Step Guide": [
+        "Critical reminder: DO NOT schedule regular appointments in ECW for sick/pain calls - these require special urgent care protocols",
+        "Immediately reassure the patient by saying something like: 'I understand you're not feeling well, and I'm going to make sure you get the appropriate care as quickly as possible.'",
+        "Systematically gather all required information in this specific order:",
+        "- Record today's date and your full name (this helps with tracking and follow-up)",
+        "- Obtain the patient's complete legal name and date of birth for accurate identification",
+        "- Clearly determine whether this is primarily a sick/illness call or a pain-related call",
+        "- Ask if they have a preferred provider they usually see (this helps with continuity of care)",
+        "- Verify their current insurance eligibility status to ensure proper billing",
+        "- Document detailed symptoms, severity, and duration as described by the patient",
+        "- Note any additional important information such as preferred language, mobility limitations, or transportation needs",
+        "Immediately complete the Sick/Pain Google Form with all the information you've gathered - this is crucial for proper triage",
+        "Provide clear next-step expectations: 'You'll receive a call from one of our specialized medical representatives within 5-10 minutes who will help schedule your urgent visit and provide further guidance.'",
+        "Always thoroughly document the entire interaction in the patient's ECW General Notes for continuity of care and follow-up purposes"
+      ],
+      "Hospital Follow-Up Protocol - Caring for Recently Discharged Patients": [
+        "Begin by asking with genuine concern: 'How long ago were you discharged from the hospital? I want to make sure we schedule the right type of follow-up care for you.'",
+        "If the patient was discharged within the last 10 days:",
+        "- Schedule an appropriate follow-up visit with their provider to ensure proper recovery monitoring",
+        "- Kindly remind them: 'Please remember to bring all of your discharge paperwork to your appointment, as this will help us provide the best possible care and follow your recovery plan.'",
+        "- Make a note in their appointment details: 'Recent hospital discharge - patient has discharge paperwork'",
+        "If the patient was discharged more than 10 days ago:",
+        "- Take time to assess whether their current concerns are related to their ongoing recovery or represent new health issues",
+        "- Schedule a regular appointment in ECW based on their current symptoms and concerns, following our standard appointment protocols"
+      ],
+      "Required Information for Hospital Follow-Up Visits": [
+        "The type of hospital discharge they had (medical treatment, surgical procedure, or emergency room visit)",
+        "What current symptoms or concerns they're experiencing since returning home",
+        "How long they've been experiencing these current symptoms",
+        "Any new concerns or changes in their condition since their hospital discharge"
+      ],
+      "Medical Transportation Assistance - Supporting Patient Mobility": [
+        "Gather the patient's complete information with patience, ensuring you have accurate contact details and medical information",
+        "Carefully double-check and confirm both the pickup and drop-off addresses for accuracy, as any errors could delay their important medical care",
+        "Send a comprehensive TeleEncounter to Karen Santos (Extension 102) with all necessary transportation details including patient information, appointment details, and both addresses",
+        "Inform the patient helpfully: 'You'll also need to contact your insurance company directly to arrange and confirm your medical transportation, as they handle the approval and scheduling process.'",
+        "If this transportation relates to a hospital follow-up, be sure to ask: 'How long ago were you discharged from the hospital?' to ensure proper scheduling and care coordination"
+      ],
+      "General Information": {
+        "Our Locations": [
+          "Riverhead: 123 Riverhead Rd, Riverhead, NY 11901",
+          "Phone: (631) 555-1234 | Fax: (631) 555-1235",
+          "Hempstead: 456 Hempstead Ave, Hempstead, NY 11550", 
+          "Phone: (516) 555-5678 | Fax: (516) 555-5679"
+        ],
+        "Important Professional Reminders": [
+          "Always maintain a patient, kind, and professional demeanor throughout every interaction",
+          "Practice active listening skills before offering solutions or recommendations",
+          "Take time to confirm and verify all information to prevent errors and misunderstandings",
+          "Document every interaction thoroughly in ECW to ensure continuity of care and proper follow-up"
+        ]
+      }
+    }
+  },
+  "ECW_System_Guide": {
+    "Getting_Started_in_ECW": {
+      "Logging_In_and_Navigation": [
+        "Begin by logging into ECW using your assigned credentials. Take a moment to familiarize yourself with the main dashboard layout and available features.",
+        "Utilize the search bar at the top of the screen to quickly and efficiently locate patients by entering their name or date of birth.",
+        "Always take a moment to verify that you have selected the correct patient profile before making any changes or updates to avoid any errors.",
+        "If you're having difficulty locating a patient, don't hesitate to ask a supervisor or colleague for assistance."
+      ],
+      "Finding_Patient_Information": [
+        "When searching for patients, you can use: Last Name, First Name, or Date of Birth (please use MM/DD/YYYY format for consistency)",
+        "If you're uncertain about the exact spelling of a name, use wildcards (*) to help broaden your search results",
+        "Always double-check that the patient details match exactly what the caller has provided to ensure accuracy",
+        "Take note of the patient's current status (Active, Inactive, etc.) as this may affect their appointment scheduling options"
+      ]
+    },
+    "Patient_Management": {
+      "Creating_New_Patient_Profiles": [
+        "To begin creating a new patient, click the 'ADD' button and take your time to fill in all required demographic information completely and accurately.",
+        "Carefully verify all insurance information and current eligibility status to prevent billing issues later.",
+        "Make sure to assign the correct Primary Care Provider (Dr. Simon or Dr. Ilan) according to the patient's insurance requirements.",
+        "Set the patient status appropriately as 'New Patient' for first-time visits to ensure they receive proper initial care.",
+        "Always schedule new patients for a 'New Patient Annual Visit (NPANNVISIT)' to allow adequate time for comprehensive assessment.",
+        "Before moving forward, save the profile and carefully verify that all information has been entered accurately."
+      ],
+      "Viewing_Patient_Insurance": [
+        "Navigate to the 'Insurance' tab in the patient's profile to review their coverage details.",
+        "Check the current status carefully: Active, Inactive, or Pending, as this affects their appointment options.",
+        "Review coverage dates, copay amounts, and any deductible information that may be relevant.",
+        "Take note of any prior authorization requirements that might be needed for certain services.",
+        "If insurance appears inactive, politely verify with the patient before proceeding to ensure we have current information.",
+        "Update insurance information promptly if the patient provides new details or changes to their coverage."
+      ],
+      "Accessing_Medical_History": [
+        "Review 'Previous Visits' tab for appointment history",
+        "Check 'Medical History' for chronic conditions",
+        "Look at 'Allergies' tab - always verify current allergies",
+        "Review 'Current Medications' for drug interactions",
+        "Note any special patient needs or preferences in the profile"
+      ]
+    },
+    "Appointment_Management": {
+      "Scheduling_Appointments": [
+        "Select appropriate appointment type from the dropdown menu",
+        "Check provider availability in the calendar view",
+        "Confirm location preference (Riverhead or Hempstead)",
+        "Verify appointment duration matches visit type requirements",
+        "Ask and document any 'Line Up' questions as prompted",
+        "Always send SMS confirmation after scheduling",
+        "Document the reason for visit in the appointment notes"
+      ],
+      "Modifying_Appointments": [
+        "To reschedule: Change date/time and update visit status to 'R/S (RESCHEDULE)'",
+        "To cancel: Update visit status to 'CANCEL(PHONECAN)'",
+        "To confirm: Update visit status to 'CONFIRM(VOICE)'",
+        "Always leave detailed notes in 'General Notes' about any changes",
+        "Record cancellation reasons in the Cancellation Reason.xlsx file"
+      ]
+    },
+    "Communication_Tools": {
+      "Sending_TeleEncounters": [
+        "Click 'TeleEncounter' from the patient's profile",
+        "Select the appropriate provider from the dropdown",
+        "Write clear, detailed messages with all relevant patient information",
+        "Include specific requests or questions you need answered",
+        "Attach any relevant documents if necessary",
+        "Send and document that a TeleEncounter was sent in General Notes"
+      ],
+      "Faxing_Documents": [
+        "Go to the 'Documents' section in the patient profile",
+        "Click 'Send Fax' option",
+        "Enter the recipient's fax number (verify it's correct)",
+        "Select documents to include from patient's file",
+        "Add a cover sheet with patient information and purpose",
+        "Send and note the fax confirmation number in patient notes"
+      ],
+      "Managing_Patient_Documents": [
+        "Navigate to 'Documents' tab in patient profile",
+        "Click 'Upload Document' to add new files",
+        "Select appropriate document type from dropdown",
+        "Choose the file from your computer",
+        "Verify the document is associated with the correct patient",
+        "Add description notes for easy future reference"
+      ]
+    },
+    "Medication_Management": {
+      "Viewing_Current_Medications": [
+        "Go to the 'Medications' tab in patient profile",
+        "Review all active prescriptions and their refill status",
+        "Check for any medication conflicts or duplicates",
+        "Note refill dates and quantities remaining",
+        "Verify pharmacy information is current and accurate"
+      ],
+      "Processing_Prescription_Requests": [
+        "Check if medication is on the approved refill list",
+        "Verify patient's pharmacy information in their profile",
+        "For refills: Send electronic prescription to pharmacy",
+        "For new medications: Send TeleEncounter to prescribing provider",
+        "Document all medication requests in General Notes",
+        "Follow up to ensure patient received their medication"
+      ]
+    },
+    "Laboratory_and_Orders": {
+      "Sending_Lab_Orders": [
+        "Access 'Orders' section in patient profile",
+        "Select required laboratory tests from the menu",
+        "Verify patient's preferred lab location",
+        "Include any special instructions or requirements",
+        "Send order electronically to the laboratory",
+        "Document order details in General Notes",
+        "Inform patient about prep requirements if applicable"
+      ],
+      "Tracking_Results": [
+        "Check 'Results' tab regularly for incoming lab reports",
+        "Verify results are reviewed by appropriate provider",
+        "Schedule follow-up appointments for results discussion if needed",
+        "Ensure abnormal results are flagged for provider review",
+        "Document when results are communicated to patients"
+      ]
+    },
+    "Documentation_Best_Practices": {
+      "General_Notes_Guidelines": [
+        "Always document every patient interaction in General Notes",
+        "Include: Date, time, your name, and reason for call",
+        "Be specific and detailed - include exact symptoms, requests, or concerns",
+        "Use professional language and proper medical terminology",
+        "Note any promises made to patients and follow-up required",
+        "Include confirmation numbers for appointments, faxes, or referrals"
+      ],
+      "Finding_Resources_and_Help": [
+        "Use the ECW Help menu for system-specific questions",
+        "Contact IT support for technical issues with ECW",
+        "Refer to the appointment guide for visit types and durations",
+        "Ask supervisors for guidance on complex patient situations",
+        "Use the insurance portals tab for eligibility verification procedures"
+      ]
+    },
+    "Troubleshooting_Common_Issues": [
+      "Patient not found: Try different spellings, check maiden names, or search by phone number",
+      "Insurance showing inactive: Verify with patient and check recent updates",
+      "Appointment slots not available: Check if provider is out of office or has reduced hours",
+      "System running slow: Clear browser cache or try refreshing the page",
+      "Can't send TeleEncounter: Verify provider is selected and message isn't too long",
+      "Document won't upload: Check file size and format requirements"
+    ]
+  },
+  "Complaints": {
+    "Patient Name Documentation": [
+      "Record the patient's complete legal name as it appears in official documents.",
+      "Verify the correct spelling and ask for clarification if needed.",
+      "Cross-reference the name with the patient's ECW profile to ensure accuracy."
+    ],
+    "Date of Birth Verification": [
+      "Document the complete date of birth in MM/DD/YYYY format.",
+      "Verify the date of birth against the patient's ECW profile.",
+      "Confirm with the patient if there are any discrepancies."
+    ],
+    "Detailed Complaint Documentation": [
+      "Record comprehensive information about the nature of the complaint.",
+      "Include the names of all staff members or providers involved in the incident.",
+      "Document the specific time, date, and location where the incident occurred.",
+      "Provide a detailed description of the complaint with specific examples and circumstances.",
+      "Document any corrective actions already taken or promised to resolve the issue.",
+      "Submit the complaint using Google Forms for proper tracking and follow-up."
+    ]
+  },
+  "KeyNotes": {
+    "Medicaid Transportation": "Assign transportation requests to Karen Santos (Extension 102) with complete pickup and drop-off addresses.",
+    "Hospital Follow-ups": "Patients must bring discharge paperwork to their follow-up appointments (remind patients and document in notes).",
+    "Underage Patients": "Legal guardians are required to be present for all medical visits involving patients under 18 years of age.",
+    "Front Desk Extensions": {
+      "Riverhead": "Extensions 104, 105, and 107 for general front desk assistance",
+      "Hempstead": "Extensions 122 and 123 (no specific staff names assigned)"
+    }
+  }
+}

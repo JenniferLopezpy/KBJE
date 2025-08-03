@@ -1,0 +1,243 @@
+{
+  "Information": {
+    "Complaints": {
+      "description": "Submit a complaint using the form below. All fields are required.",
+      "google_form_link": "https://forms.gle/your-complaints-form-link"
+    },
+    "SickAndPainForm": {
+      "description": "Report a sick or pain case using the form below. All fields are required.",
+      "google_form_link": "https://forms.gle/your-sickandpain-form-link"
+    },
+    "Cancelations": {
+      "description": "Submit a cancelation using the form below. All fields are required.",
+      "google_form_link": "https://forms.gle/your-cancelations-form-link"
+    },
+    "HIPAA_Basics": {
+      "hipaa_overview": {
+        "description": "HIPAA (Health Insurance Portability and Accountability Act) is a federal law that protects patient health information (PHI). All staff must comply to ensure confidentiality, integrity, and availability of patient data."
+      },
+      "key_principles": [
+        {"principle": "Minimum Necessary Rule", "description": "Only access or share the minimum necessary patient information required to complete a task."},
+        {"principle": "Patient Rights", "description": "Patients have the right to access their records, request corrections, and know who has accessed their information."},
+        {"principle": "Confidentiality", "description": "Do not discuss patient information in public areas or with unauthorized persons."},
+        {"principle": "Security", "description": "Use secure passwords, log out of systems when not in use, and avoid using personal devices for PHI."},
+        {"principle": "Reporting", "description": "Report any breaches or suspected unauthorized disclosures to the compliance officer immediately."}
+      ],
+      "common_violations": [
+        "Leaving charts or computers with PHI unattended.",
+        "Discussing patient information in hallways or elevators.",
+        "Accessing records of patients not under your care.",
+        "Using unencrypted email to share PHI."
+      ],
+      "staff_responsibilities": [
+        "Complete HIPAA training annually.",
+        "Follow clinic's privacy and security policies.",
+        "Use only authorized communication channels for PHI.",
+        "Lock screens when away from workstations."
+      ]
+    },
+    "Common_Prescriptions": {
+      "prescriptions": [
+        {"name": "Lisinopril", "class": "ACE Inhibitor", "indication": "Hypertension (high blood pressure), heart failure", "description": "Helps lower blood pressure by relaxing blood vessels and reducing strain on the heart."},
+        {"name": "Metformin", "class": "Biguanide", "indication": "Type 2 diabetes", "description": "First-line medication for diabetes that helps lower blood sugar by reducing glucose production in the liver and improving insulin sensitivity."},
+        {"name": "Atorvastatin (Lipitor)", "class": "Statin", "indication": "High cholesterol, cardiovascular prevention", "description": "Lowers cholesterol levels and reduces risk of heart attack and stroke by blocking cholesterol production in the liver."},
+        {"name": "Levothyroxine (Synthroid)", "class": "Thyroid hormone", "indication": "Hypothyroidism (underactive thyroid)", "description": "Synthetic thyroid hormone replacement for patients whose thyroid gland doesn't produce enough hormone naturally."},
+        {"name": "Albuterol Inhaler (ProAir, Ventolin)", "class": "Short-acting beta agonist (SABA)", "indication": "Asthma, COPD rescue medication", "description": "Quick-relief inhaler that opens airways during asthma attacks or breathing difficulties."},
+        {"name": "Amlodipine (Norvasc)", "class": "Calcium Channel Blocker", "indication": "Hypertension, chest pain (angina)", "description": "Relaxes blood vessels and improves blood flow, reducing blood pressure and chest pain."},
+        {"name": "Losartan (Cozaar)", "class": "Angiotensin Receptor Blocker (ARB)", "indication": "Hypertension, kidney protection in diabetes", "description": "Lowers blood pressure and protects kidneys, especially beneficial for diabetic patients."},
+        {"name": "Omeprazole (Prilosec)", "class": "Proton Pump Inhibitor (PPI)", "indication": "GERD, peptic ulcers, acid reflux", "description": "Reduces stomach acid production to treat heartburn, ulcers, and acid-related digestive problems."},
+        {"name": "Hydrochlorothiazide (HCTZ)", "class": "Thiazide diuretic", "indication": "Hypertension, fluid retention", "description": "Water pill that helps kidneys remove excess salt and water, lowering blood pressure."},
+        {"name": "Sertraline (Zoloft)", "class": "SSRI antidepressant", "indication": "Depression, anxiety disorders", "description": "Improves mood and reduces anxiety by balancing serotonin levels in the brain."},
+        {"name": "Prednisone", "class": "Corticosteroid", "indication": "Inflammation, allergic reactions, autoimmune conditions", "description": "Powerful anti-inflammatory medication used for severe allergies, arthritis, and immune system disorders."},
+        {"name": "Gabapentin (Neurontin)", "class": "Anticonvulsant/Nerve pain medication", "indication": "Nerve pain, seizures, restless leg syndrome", "description": "Treats nerve pain and seizures by affecting nerve signals in the brain and spinal cord."},
+        {"name": "Ibuprofen (Advil, Motrin)", "class": "NSAID", "indication": "Pain, inflammation, fever", "description": "Over-the-counter pain reliever that reduces inflammation, pain, and fever."},
+        {"name": "Amoxicillin", "class": "Penicillin antibiotic", "indication": "Bacterial infections", "description": "Antibiotic used to treat various bacterial infections including respiratory, skin, and urinary tract infections."},
+        {"name": "Warfarin (Coumadin)", "class": "Blood thinner/Anticoagulant", "indication": "Blood clot prevention, atrial fibrillation", "description": "Prevents blood clots by interfering with vitamin K-dependent clotting factors; requires regular monitoring."}
+      ]
+    },
+    "Emergency_Triage_Guide": {
+      "description": "A comprehensive guide to help distinguish between sick/pain patients who can wait for regular appointments versus those requiring immediate emergency care.",
+      "sick_vs_emergency_assessment": {
+        "regular_sick_symptoms": [
+          {"symptom": "Common cold symptoms", "details": "Mild runny nose, low-grade fever (under 101°F), minor cough without breathing difficulty", "action": "Schedule regular sick visit"},
+          {"symptom": "Mild stomach upset", "details": "Nausea without severe pain, mild diarrhea, minor indigestion", "action": "Schedule same-day or next-day appointment"},
+          {"symptom": "Minor cuts or scrapes", "details": "Small wounds that are not deep, minimal bleeding that stops with pressure", "action": "Can wait for regular appointment"},
+          {"symptom": "Routine pain", "details": "Mild to moderate pain (1-6 on pain scale) that's manageable and not worsening", "action": "Schedule appropriate follow-up visit"}
+        ],
+        "urgent_but_not_emergency": [
+          {"symptom": "Moderate fever", "details": "Fever 101-102°F with mild symptoms, patient is alert and responsive", "action": "Same-day sick visit recommended"},
+          {"symptom": "Persistent cough", "details": "Cough lasting several days but no breathing difficulty or chest pain", "action": "Schedule within 24-48 hours"},
+          {"symptom": "Minor injuries", "details": "Sprains, minor cuts that may need stitches but bleeding is controlled", "action": "Urgent care or same-day appointment"}
+        ],
+        "immediate_emergency_referral": [
+          {"symptom": "Chest pain with radiation", "details": "Pain radiating to arm, jaw, or back, especially with shortness of breath or sweating", "action": "IMMEDIATE ER - Call 911 if severe"},
+          {"symptom": "Severe breathing difficulty", "details": "Unable to speak in full sentences, gasping for air, blue lips or fingernails", "action": "IMMEDIATE ER - Call 911"},
+          {"symptom": "Stroke symptoms (FAST)", "details": "Face drooping, Arm weakness, Speech difficulty, Time to call 911", "action": "IMMEDIATE ER - Call 911"},
+          {"symptom": "Severe abdominal pain", "details": "Pain 8-10/10, rigid abdomen, vomiting blood, signs of internal bleeding", "action": "IMMEDIATE ER"},
+          {"symptom": "High fever with confusion", "details": "Fever above 103°F with altered mental status, seizures, or severe headache", "action": "IMMEDIATE ER"},
+          {"symptom": "Severe trauma", "details": "Head injury with loss of consciousness, major bleeding, suspected fractures", "action": "IMMEDIATE ER - Call 911"},
+          {"symptom": "Suicidal thoughts", "details": "Any mention of self-harm or suicidal ideation", "action": "IMMEDIATE - Mental health crisis intervention"},
+          {"symptom": "Severe allergic reaction", "details": "Difficulty breathing, swelling of face/throat, widespread rash with breathing issues", "action": "IMMEDIATE ER - Call 911"}
+        ]
+      },
+      "red_flag_questions": [
+        "Are you having any chest pain or pressure?",
+        "Are you having trouble breathing or catching your breath?",
+        "Do you have any sudden weakness in your face, arm, or leg?",
+        "Is your speech slurred or difficult to understand?",
+        "Are you having the worst headache of your life?",
+        "Are you vomiting blood or having bloody stools?",
+        "Have you lost consciousness or had a seizure?",
+        "Are you having thoughts of hurting yourself or others?"
+      ],
+      "documentation_requirements": "Always document the specific symptoms reported, the assessment level (regular/urgent/emergency), and the action taken. Include time stamps and your name for all emergency referrals."
+    },
+    "Suffolk_Services": {
+      "clinic_name": "Suffolk Primary Health",
+      "services": {
+        "primary_care": [
+          "Adult and pediatric wellness visits",
+          "Acute and chronic illness management",
+          "Annual physicals and school/sports physicals"
+        ],
+        "specialty_care": [
+          "Women's health services",
+          "Behavioral health & psychiatry",
+          "Geriatric care"
+        ],
+        "diagnostics": [
+          "On-site blood work",
+          "Referrals for x-rays, ultrasounds",
+          "EKGs and EMG referrals available"
+        ],
+        "procedures": [
+          "Immunizations",
+          "Minor wound care and suturing",
+          "Pap smears and STI screening"
+        ]
+      },
+      "insurance_and_billing": {
+        "accepts": [
+          "Medicaid",
+          "Medicare",
+          "Most commercial insurances"
+        ],
+        "uninsured": "Self-pay fee of $150 for base visit"
+      }
+    },
+    "Suffolk_Primary_Health_Network": {
+      "main_clinic": {
+        "name": "Suffolk Primary Health - Main Campus",
+        "address": "123 Riverhead Rd, Riverhead, NY 11901",
+        "phone": "(631) 555-1234",
+        "fax": "(631) 555-1235",
+        "hours": "Monday-Friday 8:00 AM - 6:00 PM, Saturday 9:00 AM - 2:00 PM"
+      },
+      "branch_locations": {
+        "hempstead_branch": {
+          "name": "Suffolk Primary Health - Hempstead",
+          "address": "456 Hempstead Ave, Hempstead, NY 11550",
+          "phone": "(516) 555-5678",
+          "fax": "(516) 555-5679",
+          "hours": "Monday-Friday 8:00 AM - 5:00 PM"
+        }
+      },
+      "associated_entities": {
+        "ssa_services": {
+          "name": "Suffolk Specialty Associates (SSA)",
+          "description": "Specialty care services affiliated with Suffolk Primary Health",
+          "address": "789 Specialty Drive, Riverhead, NY 11901",
+          "phone": "(631) 555-9000",
+          "fax": "(631) 555-9001",
+          "services": [
+            "Cardiology",
+            "Endocrinology", 
+            "Gastroenterology",
+            "Neurology",
+            "Orthopedics",
+            "Pulmonology"
+          ],
+          "referral_process": "Internal referrals processed through ECW system"
+        },
+        "vantage_health": {
+          "name": "Vantage Health Systems",
+          "description": "Integrated health services partner providing specialized care",
+          "address": "321 Vantage Boulevard, Hempstead, NY 11550",
+          "phone": "(516) 555-7500",
+          "fax": "(516) 555-7501",
+          "services": [
+            "Behavioral health and psychiatry",
+            "Women's health services",
+            "Pediatric specialties",
+            "Geriatric care",
+            "Pain management"
+          ],
+          "insurance": "Accepts same insurance plans as Suffolk Primary Health"
+        },
+        "suffolk_diagnostic_center": {
+          "name": "Suffolk Diagnostic & Imaging Center",
+          "description": "Full-service diagnostic facility serving Suffolk Primary Health patients",
+          "address": "555 Diagnostic Way, Riverhead, NY 11901",
+          "phone": "(631) 555-3000",
+          "fax": "(631) 555-3001",
+          "services": [
+            "Laboratory services (blood work, urinalysis)",
+            "Digital X-rays",
+            "Ultrasound imaging",
+            "EKG and stress testing",
+            "Mammography",
+            "CT scans (by referral)"
+          ],
+          "hours": "Monday-Friday 7:00 AM - 5:00 PM, Saturday 8:00 AM - 12:00 PM"
+        },
+        "suffolk_urgent_care": {
+          "name": "Suffolk Urgent Care Centers",
+          "description": "After-hours and urgent care services for Suffolk Primary Health patients",
+          "locations": [
+            {
+              "name": "Riverhead Urgent Care",
+              "address": "100 Urgent Care Lane, Riverhead, NY 11901",
+              "phone": "(631) 555-8000",
+              "hours": "Daily 8:00 AM - 10:00 PM"
+            },
+            {
+              "name": "Hempstead Urgent Care", 
+              "address": "200 Quick Care Ave, Hempstead, NY 11550",
+              "phone": "(516) 555-8500",
+              "hours": "Daily 9:00 AM - 9:00 PM"
+            }
+          ],
+          "services": [
+            "Minor injuries and illnesses",
+            "On-site X-rays",
+            "Basic laboratory tests",
+            "Occupational health services"
+          ]
+        }
+      },
+      "administrative_contacts": {
+        "billing_department": {
+          "phone": "(631) 555-1186",
+          "extension": "186",
+          "contact": "Agustina Colomer",
+          "hours": "Monday-Friday 9:00 AM - 5:00 PM"
+        },
+        "medical_records": {
+          "phone": "(631) 555-1102", 
+          "extension": "102",
+          "contact": "Karen Santos",
+          "services": ["Medical record requests", "Transportation assistance", "Insurance authorization"]
+        },
+        "front_desk_riverhead": {
+          "extensions": ["104", "105", "107"],
+          "services": ["Appointment scheduling", "General inquiries", "Check-in assistance"]
+        },
+        "front_desk_hempstead": {
+          "extensions": ["122", "123"],
+          "services": ["Appointment scheduling", "General inquiries", "Check-in assistance"]
+        }
+      }
+    },
+    "Extensions": {}
+  }
+}

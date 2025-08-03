@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBJE - Gestor de Categorías JSON</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'smooth-blue': '#3B82F6',
+                        'echoing-blue': '#1E40AF',
+                        'soft-white': '#F8FAFC'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold">KBJE</h1>
+                        <p class="text-sm opacity-90">Gestor Automático de Categorías</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div id="status-indicator" class="flex items-center space-x-2">
+                        <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                        <span class="text-sm">Sistema Activo</span>
+                    </div>
+                    <div class="text-sm opacity-90">
+                        <span id="file-count">0</span> archivos JSON
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="text-sm opacity-90">
+                            <span th:if="${#authentication.principal.username}" th:text="${#authentication.principal.username}">Usuario</span>
+                        </div>
+                        <form th:action="@{/logout}" method="post" class="inline">
+                            <button type="submit" class="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-3 py-1 rounded-lg text-sm transition duration-200">
+                                Cerrar Sesión
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <!-- System Status -->
+        <div class="mb-8">
+            <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="text-lg font-semibold text-gray-800">Estado del Sistema</h2>
+                        <p class="text-gray-600 mt-1">Monitoreo automático de archivos JSON</p>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-2xl font-bold text-green-600" id="category-count">0</div>
+                        <div class="text-sm text-gray-500">Categorías Activas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categories Grid -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Categorías Disponibles</h2>
+            <div id="categories-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Categories will be loaded here -->
+            </div>
+        </div>
+
+        <!-- File Monitor -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">Archivos JSON Monitoreados</h3>
+            <div id="files-list" class="space-y-2">
+                <!-- Files will be listed here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Loading Template -->
+    <template id="loading-template">
+        <div class="bg-white rounded-lg shadow-md p-6 card-hover fade-in">
+            <div class="animate-pulse">
+                <div class="h-4 bg-gray-200 rounded w-3/4 mb-4"></div>
+                <div class="h-3 bg-gray-200 rounded w-1/2 mb-2"></div>
+                <div class="h-3 bg-gray-200 rounded w-2/3"></div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Category Card Template -->
+    <template id="category-template">
+        <div class="bg-white rounded-lg shadow-md p-6 card-hover fade-in">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-lg font-semibold text-gray-800 category-name"></h3>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm subcategory-count"></span>
+            </div>
+            <p class="text-gray-600 text-sm mb-4 category-description">Categoría con información estructurada</p>
+            <div class="flex items-center justify-between">
+                <span class="text-xs text-gray-500 last-updated"></span>
+                <a href="#" class="text-blue-600 hover:text-blue-800 text-sm font-medium view-details">
+                    Ver Detalles →
+                </a>
+            </div>
+        </div>
+    </template>
+
+    <script>
+        // Global variables
+        let categories = [];
+        let availableFiles = [];
+
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            loadCategories();
+            loadAvailableFiles();
+            startAutoRefresh();
+        });
+
+        // Load categories from API
+        async function loadCategories() {
+            try {
+                const response = await fetch('/api/categories');
+                categories = await response.json();
+                displayCategories();
+                updateCategoryCount();
+            } catch (error) {
+                console.error('Error loading categories:', error);
+                showError('Error al cargar las categorías');
+            }
+        }
+
+        // Load available files
+        async function loadAvailableFiles() {
+            try {
+                const response = await fetch('/api/files');
+                availableFiles = await response.json();
+                displayFiles();
+                updateFileCount();
+            } catch (error) {
+                console.error('Error loading files:', error);
+            }
+        }
+
+        // Display categories in the grid
+        function displayCategories() {
+            const grid = document.getElementById('categories-grid');
+            grid.innerHTML = '';
+
+            if (categories.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-12">
+                        <div class="text-gray-400 mb-4">
+                            <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2">No hay categorías disponibles</h3>
+                        <p class="text-gray-500">Agrega archivos JSON al directorio para comenzar</p>
+                    </div>
+                `;
+                return;
+            }
+
+            categories.forEach(category => {
+                const template = document.getElementById('category-template');
+                const clone = template.content.cloneNode(true);
+                
+                clone.querySelector('.category-name').textContent = formatCategoryName(category.name);
+                clone.querySelector('.subcategory-count').textContent = `${category.subcategories.length} subcategorías`;
+                clone.querySelector('.last-updated').textContent = formatDate(category.lastUpdated);
+                clone.querySelector('.view-details').href = `/category/${category.name}`;
+                
+                grid.appendChild(clone);
+            });
+        }
+
+        // Display available files
+        function displayFiles() {
+            const filesList = document.getElementById('files-list');
+            filesList.innerHTML = '';
+
+            if (availableFiles.length === 0) {
+                filesList.innerHTML = `
+                    <div class="text-center py-4 text-gray-500">
+                        No se encontraron archivos JSON
+                    </div>
+                `;
+                return;
+            }
+
+            availableFiles.forEach(file => {
+                const fileDiv = document.createElement('div');
+                fileDiv.className = 'flex items-center justify-between p-3 bg-gray-50 rounded-lg';
+                fileDiv.innerHTML = `
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span class="font-medium text-gray-700">${file}</span>
+                    </div>
+                    <span class="text-sm text-gray-500">Monitoreado</span>
+                `;
+                filesList.appendChild(fileDiv);
+            });
+        }
+
+        // Update counters
+        function updateCategoryCount() {
+            document.getElementById('category-count').textContent = categories.length;
+        }
+
+        function updateFileCount() {
+            document.getElementById('file-count').textContent = availableFiles.length;
+        }
+
+        // Format category name
+        function formatCategoryName(name) {
+            return name.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        }
+
+        // Format date
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('es-ES', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+        }
+
+        // Auto refresh every 30 seconds
+        function startAutoRefresh() {
+            setInterval(() => {
+                loadCategories();
+                loadAvailableFiles();
+            }, 30000);
+        }
+
+        // Show error message
+        function showError(message) {
+            console.error(message);
+            // You can implement a toast notification here
+        }
+    </script>
+</body>
+</html> 

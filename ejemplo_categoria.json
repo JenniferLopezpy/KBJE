@@ -1,0 +1,43 @@
+{
+  "Informacion_Basica": {
+    "descripcion": "Información básica del sistema",
+    "version": "1.0.0",
+    "fecha_creacion": "2024-01-15"
+  },
+  "Procedimientos": {
+    "nuevo_paciente": {
+      "pasos": [
+        "Saludar al paciente",
+        "Verificar información personal",
+        "Completar formularios",
+        "Asignar médico"
+      ],
+      "tiempo_estimado": "30 minutos"
+    },
+    "cita_medica": {
+      "pasos": [
+        "Confirmar disponibilidad",
+        "Agendar fecha y hora",
+        "Enviar confirmación"
+      ],
+      "tiempo_estimado": "15 minutos"
+    }
+  },
+  "Medicamentos": {
+    "antibioticos": [
+      "Amoxicilina",
+      "Azitromicina",
+      "Ciprofloxacino"
+    ],
+    "analgesicos": [
+      "Ibuprofeno",
+      "Paracetamol",
+      "Naproxeno"
+    ]
+  },
+  "Contactos": {
+    "emergencias": "911",
+    "oficina": "555-0123",
+    "email": "info@clinica.com"
+  }
+} 

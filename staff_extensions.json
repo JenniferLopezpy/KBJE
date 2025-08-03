@@ -1,0 +1,143 @@
+{
+  "StaffExtensions": [
+    {
+      "Staff": "Call Center- Paola",
+      "Ext": "101"
+    },
+    {
+      "Staff": "Fernando",
+      "Ext": "102"
+    },
+    {
+      "Staff": "Call Center- Karen",
+      "Ext": "103"
+    },
+    {
+      "Staff": "Front Desk- Jennifer",
+      "Ext": "104"
+    },
+    {
+      "Staff": "Front Desk- Rosana",
+      "Ext": "105"
+    },
+    {
+      "Staff": "Front Desk- Rina",
+      "Ext": "106"
+    },
+    {
+      "Staff": "Lab",
+      "Ext": "107"
+    },
+    {
+      "Staff": "Doreen - H Admin",
+      "Ext": "109"
+    },
+    {
+      "Staff": "Call Center- Elvis",
+      "Ext": "110"
+    },
+    {
+      "Staff": "Jessica Jaramillo / Khristy - FD H",
+      "Ext": "122"
+    },
+    {
+      "Staff": "Dorian Mejia - FD H",
+      "Ext": "123"
+    },
+    {
+      "Staff": "Diego Cruz",
+      "Ext": "135"
+    },
+    {
+      "Staff": "Lashanta Kang",
+      "Ext": "154"
+    },
+    {
+      "Staff": "Alejandra Dominguez - PC",
+      "Ext": "155"
+    },
+    {
+      "Staff": "Karina Rodriguez - PC",
+      "Ext": "156"
+    },
+    {
+      "Staff": "Benjamin Penn PA",
+      "Ext": "157"
+    },
+    {
+      "Staff": "Yolette Georges PA",
+      "Ext": "158"
+    },
+    {
+      "Staff": "Naomi Mazlin",
+      "Ext": "159"
+    },
+    {
+      "Staff": "Anaica Allen",
+      "Ext": "160"
+    },
+    {
+      "Staff": "Stephanie - PC",
+      "Ext": "161"
+    },
+    {
+      "Staff": "Rochelle Paredes",
+      "Ext": "163"
+    },
+    {
+      "Staff": "Gerardo Biasella",
+      "Ext": "135",
+      "Department": "QCM and Conf Team"
+    },
+    {
+      "Staff": "Matias Cordero",
+      "Ext": "140",
+      "Department": "QCM and Conf Team"
+    },
+    {
+      "Staff": "Rocio Funes",
+      "Ext": "143",
+      "Department": "QCM and Conf Team"
+    },
+    {
+      "Staff": "Martina Tripicchio",
+      "Ext": "144",
+      "Department": "QCM and Conf Team"
+    },
+    {
+      "Staff": "Ana Cornu",
+      "Ext": "150",
+      "Department": "QCM and Conf Team"
+    },
+    {
+      "Staff": "Anto Capurro",
+      "Ext": "153",
+      "Department": "QCM and Conf Team"
+    },
+    {
+      "Staff": "Anto Gagliano",
+      "Ext": "126",
+      "Department": "QCM and Conf Team"
+    },
+    {
+      "Staff": "Barbi Veliz",
+      "Ext": "132",
+      "Department": "QCM and Conf Team"
+    },
+    {
+      "Staff": "Joaco Herrera",
+      "Ext": "149",
+      "Department": "QCM and Conf Team"
+    },
+    {
+      "Staff": "Karen Santos",
+      "Ext": "102",
+      "Responsibilities": "Medicaid transport, medical records"
+    },
+    {
+      "Staff": "Agustina Colomer",
+      "Ext": "186",
+      "Responsibilities": "Billing questions/payments"
+    }
+  ]
+}
