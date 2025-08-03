@@ -1,0 +1,17 @@
+{
+  "test_category": {
+    "subcategory_1": {
+      "title": "Prueba de Actualización",
+      "description": "Este es un archivo de prueba para verificar que el sistema detecta automáticamente las actualizaciones",
+      "content": "Contenido de prueba que se actualiza automáticamente",
+      "last_updated": "2024-01-15"
+    },
+    "subcategory_2": {
+      "title": "Información de Contacto",
+      "description": "Datos de contacto para pruebas",
+      "phone": "+1-555-0123",
+      "email": "test@clinic.com",
+      "hours": "8:00 AM - 6:00 PM"
+    }
+  }
+} 
