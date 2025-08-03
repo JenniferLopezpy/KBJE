@@ -1,2 +1,0 @@
-[33m5a4597c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Fix: Corregir errores 404 de favicon.ico y recursos estáticos - Agregado directorio static, controlador para recursos estáticos, configuración mejorada de seguridad y WebMvcConfig
-[33mc6d68d4[m Initial commit: KBJE Knowledge Base for Clinic - Complete project with authentication, automatic JSON processing, and modern UI
